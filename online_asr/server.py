@@ -45,7 +45,7 @@ parser = argparse.ArgumentParser(description=__doc__)
 add_arg = functools.partial(add_arguments, argparser=parser)
 add_arg('host_port',        int,    8086,    "Server's IP port.")
 add_arg('host_ip',          str,
-        '10.19.203.82',
+        'localhost',
         "Server's IP address.")
 add_arg('frame_len',        float,    0.2,    "frame length in senconds")
 add_arg('frame_overlap',    float,    2,      "frame overlapping in seconds")
