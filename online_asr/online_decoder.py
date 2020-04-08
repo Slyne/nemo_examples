@@ -131,7 +131,7 @@ class OnlineDecoder(object):
                 if (self.ext_scoring_func is not None) and (last_word != ' '):
                     if last_word != '':
                         word_count += 1
-                    log_prob, _ = log_prob + self.ext_scoring_func(last_word, state, word_count, log=True)
+                    log_prob, _ = self.ext_scoring_func(last_word, state, word_count, log=True)
                 beam_result.append((log_prob, seq.lstrip()))
             else:
                 beam_result.append((float("-INF"), ''))
